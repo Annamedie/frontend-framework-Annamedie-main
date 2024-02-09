@@ -8,8 +8,17 @@
 </header>
 <main>
   <ul class="years">
-    {#each frameworks as {name}}
-      <li>{name}</li>
+    {#each frameworks as {name, color, surveys }}
+      <h2 style="color: {color};">{name}</h2>
+      <ul>
+        {#each surveys as {year, retention } }
+        <li >
+          {year}
+        </li>
+        <li>{retention}%</li>
+          
+        {/each}
+      </ul>
     {/each}
   </ul>
 </main>
@@ -19,6 +28,9 @@
     justify-content: center;
     color: white;
     font-size: 5em;
+  }
+  h2{
+    color: white;
   }
   li{
     color: white;
