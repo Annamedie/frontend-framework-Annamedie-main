@@ -1,5 +1,5 @@
 <script lang="ts">
-  const years = [2016,2017,2018,2019,2020,2021,2022];
+  import { frameworks } from '../data/index.js';
 </script>
 <header>
 <h1>
@@ -8,8 +8,8 @@
 </header>
 <main>
   <ul class="years">
-    {#each years as year}
-      <li>{year}</li>
+    {#each frameworks as {name}}
+      <li>{name}</li>
     {/each}
   </ul>
 </main>
