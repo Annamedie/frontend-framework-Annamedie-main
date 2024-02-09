@@ -19,6 +19,7 @@
           
         {/each}
       </ul>
+      <h2 style="color: {color};">{name}</h2>
     {/each}
   </ul>
 </main>
@@ -33,6 +34,7 @@
     color: white;
   }
   li{
+    list-style: none;
     color: white;
   }
 </style>
