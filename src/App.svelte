@@ -5,7 +5,7 @@
 </script>
 <header>
 <h1>
-  The state of Javascript
+  State of Javascript
 </h1>
 </header>
 <main>
@@ -22,7 +22,7 @@
 
         <!-- Skapa tomma celler för de undersöknar som saknas: surveys[0].year - 2016 = 3 -->
         {#each {length: surveys[0].year - 2016} as _,i }
-          <div>{i+1}</div>
+          <div class="tom-cell" data-cy="chart-data-cell"></div>
         {/each}
       
         {#each surveys as survey }
@@ -35,9 +35,14 @@
     {/each}
         </div>
 </main>
+<footer></footer>
 <style>
  
+ main{
+  margin: 5em;
+ }
   .chart {
+
     display: grid;
     grid-template-columns: repeat(9, 1fr);
     gap: 10px;
@@ -48,10 +53,11 @@
    
   }
   h1{
+    font-size: 3em;
     display: flex;
     justify-content: center;
     color: white;
-    font-size: 5em;
+    
   }
   h2{
     color: white;
@@ -64,6 +70,14 @@
     width: 50px;
     border-radius: 50%;
     border-style: solid;
+  }
+  footer{
+    height: 5em;
+    background-color: purple;
+  }
+  .tom-cell{
+    height: 10px;
+    width: 10px;
   }
 
 
