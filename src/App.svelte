@@ -42,7 +42,6 @@
   margin: 5em;
  }
   .chart {
-
     display: grid;
     grid-template-columns: repeat(9, 1fr);
     gap: 10px;
@@ -50,7 +49,6 @@
     align-items: center;
     margin: auto;
     overflow-x: scroll;
-   
   }
   h1{
     font-size: 3em;
@@ -59,9 +57,11 @@
     color: white;
     
   }
-  h2{
+  .header-cell{
     color: white;
+    font-size: larger;
   }
+  
   .chart-data{
     display:flex;
     justify-content: center;
@@ -73,7 +73,7 @@
   }
   footer{
     height: 5em;
-    background-color: purple;
+    background-color: black;
   }
   .tom-cell{
     height: 10px;
